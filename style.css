@@ -113,6 +113,7 @@ body {
 
 #i-github {
   color: var(--main-font-color);
+  margin-left: 7px;
 }
 
 #headleft {
