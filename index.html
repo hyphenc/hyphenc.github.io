@@ -1,34 +1,67 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>hyphenc</title>
-    <style>
-        body {
-            font-family: monospace;
-            font-size: 12em;
-            font-weight: bold;
-            margin: 0;
-            color: #ccc;
-            background-color: #eee;
-            text-align: center;
-            margin-top: 20%;
-            position: absolute;
-            width: 100%;
-        }
-        #links {
-            font-size: 24pt;
-            color: #ddd;
-        }
-        #links > a {
-            text-decoration: none;
-            color: #ccc;
-        }
-    </style>
-    </head>
-    <body>
-        links
-            <div id="links">
-              [ <a href="./productivity.html">productivity</a> | <a href="https://hyphenc.github.io/startpage/">startpage</a> ]
-            </div>
-    </body>
+<!DOCTYPE HTML>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8">
+<title>hyphenc</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<div class="header">
+  <div id="headleft">
+  <div><img src="https://avatars0.githubusercontent.com/u/46054695"></div>
+  <div id="headertitle">
+    <h1>hyphenc</h1>
+    <h4 id="subtext">sometimes i do stuff</h4>
+  </div>
+  </div>
+  <div id="actions">
+<!-- SVG icons from https://github.com/danklammer/bytesize-icons, thanks. -->
+    <a href="https://github.com/hyphenc"><svg id="i-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" /></svg></a>
+  <span onclick="switchColor()"><svg id="i-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14 2C 9 2 3 7 3 15 3 23 9 29 17 29 25 29 30 23 30 18 19 25 7 13 14 2Z" /></svg></span>
+  </div>
+</div>
+<div id="maincontent">
+
+<div id="major">
+<h1>projects</h1>
+<dl>
+<dt><a href="https://github.com/hyphenc/startpage">&nbsp;startpage&nbsp;</a></dt>
+<dd>My startpage with links to my favorite websites, date and time, the weather forecast and an image that's nice to look at. The searchbar is multifunctional and (in pretty much all cases) just works (i.e. accepts search queries, DuckDuckGo Bangs and URLs with and without the 'https://' scheme). Also supports playing certain radio channels. The images served are all webp images to improve loadtime, which is quite important for a startpage.</dd>
+<dt><a href="https://github.com/hyphenc/mailserver">&nbsp;mailserver&nbsp;</a></dt>
+<dd>A set of config files (with secure defaults AFAIK) for a mailserver running Postfix, Dovecot and Rspamd. Also contains a whole write-up of how to set it all up (including DNS, etc). I mainly wrote all this for myself to remember all the things involved, if I need to do it again. Currently I'm also running my own mailserver.</dd>
+<dt><a href="https://github.com/hyphenc/vplan">&nbsp;vplan&nbsp;</a></dt>
+<dd>A substitution plan scraper for a tool widely used by schools in Germany. The 'official' way to use said tool was annoying and a popular (3rd party) app that popped up a little later was ehh. Thus I wrote my own tool. The 'backend' is basically a bash script that does some heavy regex matching and edits some html files served by nginx, while the 'frontend' is mainly javascript logic like sorting by date, hiding old items and a filtering engine that supports regexes.</dd>
+<dt><a href="https://github.com/hyphenc/mradio">&nbsp;mradio&nbsp;</a></dt>
+<dd>A PWA-esque webpage for listening to different online radio stations/streams. UI is generated on-the-fly from a config file that contains info like the stream URL or thumbnails for each channel. It's called 'mradio' ('mobile radio') because it was originally intended for mobile phones (the available apps weren't to my liking).</dd>
+<dt><a href="https://github.com/hyphenc/huec">&nbsp;huec&nbsp;</a></dt>
+<dd>An endeavour I'm nowadays not really proud of anymore, because I didn't quite understand how a C project is structured. huec is a C program to control Philips Hue lights. May contain bugs, definitely needs a refactor. But still, I had fun and learned a lot.</dd>
+<dt><a href="https://github.com/hyphenc/shelltwitch">&nbsp;shelltwitch&nbsp;</a></dt>
+<dd>a CLI tool to check what streamers are online, what they're playing (etc) using the Twitch API. Sends desktop notifications when someone's gone live using notify-send and cron. Followed streamers are also pulled from the API.</dd>
+<dt><a href="https://github.com/hyphenc/hyphenc.github.io">&nbsp;this website&nbsp;</a></dt>
+<dd>An index of what I've done/am doing...</dd>
+</dl>
+
+</div>
+<div id="minor">
+<h1>minor things</h1>
+<dl>
+<dt><a href="https://github.com/hyphenc/dotfiles">&nbsp;dotfiles&nbsp;</a></dt>
+<dd>My linux dotfiles, scripts, etc.</dd>
+<dt><a href="https://github.com/hyphenc/xdm-simple">&nbsp;xdm-simple&nbsp;</a></dt>
+<dd>A minimal theme for XDM (X Display Manager) with a clock and buttons to reboot (etc). I (still) use XDM because it has been rather stable (last substantial change in the codebase was 13 yrs ago), is somewhat minimal and just works.</dd>
+<dt><a href="https://github.com/hyphenc/dotfiles/blob/master/.scripts/pldl">&nbsp;pldl&nbsp;</a></dt>
+<dd>A bash script that downloads a Youtube playlist, tries to extract artist name and song title and encodes the video thumbnail in the final mp3. I use this for downloading music.</dd>
+<dt><a href="https://gist.github.com/hyphenc/fc7d723b001c95250e73679a3da803fb/">&nbsp;youtube.css&nbsp;</a></dt>
+<dd>A minimal UserCSS for Youtube.</dd>
+<dt><a href="https://gist.github.com/hyphenc/c97d8d1765bdaabce768c891e684fe83">&nbsp;strawbot.py&nbsp;</a></dt>
+<dd>A voting bot for strawpoll.de, I wrote this for fun.</dd>
+<dt><a href="https://gist.github.com/hyphenc/fb7757fa678a25e7504eccd5d2c44515">&nbsp;hugendubel in stock&nbsp;</a></dt>
+<dd>A bash script that checks if a book is in stock in the Hugendubel stores in your area. Uses their 'internal APIs' and sometimes doesn't work because of reCAPTCHA.</dd>
+<dt><a href="https://gist.github.com/hyphenc/3e47e80311a76304a7fff56281059dc5">&nbsp;nc urlshare&nbsp;</a></dt>
+<dd>A bash script that uploads a file to a nextcloud server, sets its sharing options to URL sharing and returns to the URL.</dd>
+</dl>
+</div>
+</div>
+<script src='./script.js'></script>
+</body>
 </html>
