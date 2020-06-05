@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css");
+
 :root {
   --main-font-color: rgb(51,51,51);
   --main-bg-color: rgb(235,235,235);
@@ -37,7 +40,7 @@
 
 dt {
   font-size: 1.25em;
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   margin-bottom: 5px;
 }
 
@@ -95,7 +98,7 @@ dt > a, dt > a:visited {
 
 body {
   background: var(--main-bg-color);
-  font-family: serif;
+  font-family: "Merriweather", serif;
   color: var(--main-font-color);
   margin: 0;
 }
