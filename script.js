@@ -9,8 +9,8 @@ function switchColor() {
     document.getElementById("i-github").style.color="var(--main-font-color)";
     document.getElementsByClassName("header")[0].style.background="var(--header-bg-color)";
     document.getElementsByTagName("img")[0].style.filter="unset";
-    document.documentElement.style.setProperty("--highlight-color", "rgb(190,190,190)");
-    document.documentElement.style.setProperty("--highlighted-text-color", "rgb(80,80,80)");
+    document.documentElement.style.setProperty("--highlight-color", "rgb(210,210,210)");
+    document.documentElement.style.setProperty("--highlighted-text-color", "rgb(75,75,75)");
 
   } else {
     // dark

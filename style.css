@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css");
-
 :root {
   --main-font-color: rgb(51,51,51);
-  --main-bg-color: rgb(235,235,235);
-  --header-bg-color: rgb(225,225,225);
-  --highlighted-text-color: rgb(80,80,80);
-  --highlight-color: rgb(190,190,190);
+  --main-bg-color: rgb(238,238,238);
+  --header-bg-color: rgb(230,230,230);
+  --highlighted-text-color: rgb(75,75,75);
+  --highlight-color: rgb(210,210,210);
   --dark-main-bg-color: rgb(51,51,51);
   --dark-main-font-color: rgb(200,200,200);
   --dark-header-bg-color: rgb(35,35,35);
-  --dark-highlight-color: rgb(210,210,210);
+  --dark-highlight-color: rgb(40,40,40);
 }
 
 #headertitle {
@@ -124,3 +121,6 @@ body {
   align-items: center;
   flex-direction: row;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css");
